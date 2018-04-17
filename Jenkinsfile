@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:6-alpine'
-            args '-p 3000:3000 -p 5000:5000' 
+            args '-p 3000:3000 -p 5000:5000'
         }
     }
     environment {
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'cd myapp'
+                sh 'cd myapp'
                 sh 'npm install'
             }
         }
